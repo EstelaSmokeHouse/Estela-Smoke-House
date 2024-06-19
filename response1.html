@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estela Smoke House</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <!-- Incorporar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baskerville&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales de la página */
+        body {
+            font-family: 'Baskerville', serif; /* Usando Baskerville como fuente principal */
+            margin: 0;
+            padding: 0;
+            background-color: #f3f0eb; /* Color de fondo cercano a la carne ahumada */
+            color: #333; /* Color principal de texto */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Mínimo alto de la ventana */
+        }
+        header {
+            background-color: #9e827a; /* Color de fondo del encabezado */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 24px; /* Tamaño de fuente del encabezado */
+            font-weight: bold; /* Negrita para el encabezado */
+            flex-shrink: 0; /* Evitar que el encabezado se reduzca */
+            border-radius: 50px; /* Borde redondeado para el encabezado */
+            margin: 20px; /* Margen exterior */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px; /* Tamaño de fuente del título principal */
+        }
+        header p {
+            font-style: italic; /* Texto en cursiva */
+            font-size: 18px; /* Tamaño de fuente del texto en cursiva */
+            margin: 5px 0 0; /* Margen superior */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #bfaea5; /* Color de fondo de la barra de navegación */
+            padding: 10px 0; /* Espaciado interno superior e inferior */
+            border-radius: 30px; /* Borde redondeado para la barra de navegación */
+            margin: 20px; /* Margen exterior */
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #9e827a; /* Color de fondo al pasar el mouse sobre los enlaces */
+        }
+        .container {
+            padding: 2rem;
+            background-color: #ffffff; /* Color de fondo del contenedor principal */
+            border-radius: 20px; /* Borde redondeado para el contenedor principal */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: none; /* Ocultamos todos los contenedores al inicio */
+            overflow-y: auto; /* Agregar scroll si el contenido es más largo */
+            flex-grow: 1; /* Permitir que el contenido crezca */
+            margin: 20px; /* Margen exterior */
+        }
+        .container.active {
+            display: block; /* Mostramos el contenedor activo */
+        }
+        footer {
+            background-color: #9e827a; /* Color de fondo del pie de página */
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            flex-shrink: 0; /* Evitar que el pie de página se reduzca */
+            border-radius: 50px; /* Borde redondeado para el pie de página */
+            margin: 20px; /* Margen exterior */
+        }
+        .story {
+            text-align: justify; /* Justificación del texto */
+            margin-bottom: 20px; /* Espacio inferior */
+            font-size: 18px; /* Tamaño de fuente del texto de la historia */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+        .form-group {
+            margin-bottom: 15px; /* Espacio inferior entre los grupos de formulario */
+        }
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #9e827a; /* Color de fondo del botón */
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #bfaea5; /* Color de fondo del botón al pasar el mouse */
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Estela Smoke House</h1>
+        <p>Recordando el sabor de Cuba</p>
+    </header>
+    <nav>
+        <a href="#historia">Historia</a>
+        <a href="#vision">Visión</a>
+        <a href="#mision">Misión</a>
+        <a href="#calculadora">Calculadora de Envío</a>
+    </nav>
+    <div class="container active" id="historia">
+        <h2>Historia</h2>
+        <div class="story">
+            <p>Estela era mi abuela, una cocinera excepcional que vivía en condiciones difíciles en Cuba en 1994. A pesar de tener pocos recursos, cocinaba con leña y especias escasas, creando platos que aún hoy recuerdo con nostalgia. Cuando la trajimos a nuestra casa para mejorar su calidad de vida, descubrimos que ya no podía replicar aquel sabor único que definía sus platillos: era el toque ahumado de la leña lo que los hacía especiales.</p>
+            <p>Estela Smoke House es nuestro homenaje a todas las abuelas que dejaron un sabor imborrable en nuestros recuerdos.</p>
+        </div>
+    </div>
+    <div class="container" id="vision">
+        <h2>Visión</h2>
+        <div class="story">
+            <p>Nuestra visión en Estela Smoke House es mantener vivo el auténtico sabor de Cuba en cada bocado. Nos esforzamos por ofrecer productos que no solo satisfagan el paladar, sino que también evocan recuerdos de aromas y sabores que perduran en el tiempo. Más que vender productos, queremos que cada cliente recuerde la experiencia de saborear la tradición y el cariño en cada platillo que ofrecemos.</p>
+        </div>
+    </div>
+    <div class="container" id="mision">
+        <h2>Misión</h2>
+        <div class="story">
+            <p>Nuestra misión en Estela Smoke House es superar las expectativas de nuestros clientes en cada interacción. Nos comprometemos a ofrecer productos ahumados de la más alta calidad, preparados con el mismo cuidado y amor que las recetas tradicionales de nuestras abuelas. Buscamos crear experiencias gastronómicas que no solo satisfagan el paladar, sino que también revivan recuerdos y emociones de la Cuba auténtica.</p>
+        </div>
+    </div>
+    <div class="container" id="calculadora">
+        <h2>Calculadora de Envío</h2>
+        <div class="story">
+            <p>La calculadora de envío te permite estimar el costo de envío de nuestros productos a tu ubicación. Ingresa los detalles necesarios y obtén una cotización precisa antes de confirmar tu pedido.</p>
+            <!-- Contenido de la calculadora de envío -->
+            <div class="form-group">
+                <label for="producto">Selecciona un producto:</label>
+                <select id="producto" name="producto" onchange="actualizarPrecio()">
+                    <option value="jamon_con_hueso">Jamón Pierna con hueso</option>
+                    <option value="jamon_sin_hueso">Jamón Pierna sin hueso</option>
+                    <option value="lomo_ahumado">Lomo ahumado</option>
+                    <option value="chuleta_ahumada">Chuleta ahumada</option>
+                    <option value="pollo_ahumado">Pollo ahumado</option>
+                    <option value="alitas_pollo_ahumadas">Alitas de pollo ahumadas</option>
+                    <option value="chorizo_cubano">Chorizo cubano</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio por libra:</label>
+                <input type="text" id="precio" name="precio" readonly>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad (libras):</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" value="1" onchange="calcularEnvio()">
+            </div>
+            <div class="form-group">
+                <label for="codigo_postal_cliente">Código Postal del Cliente:</label>
+                <input type="text" id="codigo_postal_cliente" name="codigo_postal_cliente" placeholder="Ingresa tu código postal" onchange="calcularEnvio()">
+            </div>
+            <div class="form-group">
+                <label for="empresa_envio">Selecciona la compañía de envío:</label>
+                <select id="empresa_envio" name="empresa_envio" onchange="calcularEnvio()">
+                    <option value="usps">USPS - 3 a 5 días</option>
+                    <option value="ups">UPS - 2 a 4 días</option>
+                    <option value="fedex">FedEx - 1 a 3 días</option>
+                </select>
+            </div>
+            <div class="result">
+                <p id="costo_envio"></p>
+            </div>
+            <button onclick="calcularEnvio()">Calcular Envío</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Estela Smoke House. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Script para manejar la navegación entre pestañas
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav a");
+            const containers = document.querySelectorAll(".container");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetContainer = document.getElementById(targetId);
+
+                    // Ocultar todos los contenedores y remover la clase 'active'
+                    containers.forEach(container => {
+                        container.classList.remove("active");
+                    });
+
+                    // Mostrar el contenedor seleccionado
+                    targetContainer.classList.add("active");
+
+                    // Desplazarse al inicio del contenedor
+                    window.scrollTo(0, targetContainer.offsetTop);
+                });
+            });
+
+            // Inicializar el precio al cargar la página
+            actualizarPrecio();
+        });
+
+        // Script para actualizar el precio basado en el producto seleccionado
+        function actualizarPrecio() {
+            const precios = {
+                jamon_con_hueso: 7.00,
+                jamon_sin_hueso: 7.00,
+                lomo_ahumado: 7.00,
+                chuleta_ahumada: 7.00,
+                pollo_ahumado: 7.00,
+                alitas_pollo_ahumadas: 7.00,
+                chorizo_cubano: 10.00
+            };
+
+            const productoSelect = document.getElementById('producto');
+            const precioInput = document.getElementById('precio');
+            const productoSeleccionado = productoSelect.value;
+
+            precioInput.value = precios[productoSeleccionado].toFixed(2) + ' USD';
+            calcularEnvio();
+        }
+
+        // Script para calcular el costo de envío
+        function calcularEnvio() {
+            const precios = {
+                jamon_con_hueso: 7.00,
+                jamon_sin_hueso: 7.00,
+                lomo_ahumado: 7.00,
+                chuleta_ahumada: 7.00,
+                pollo_ahumado: 7.00,
+                alitas_pollo_ahumadas: 7.00,
+                chorizo_cubano: 10.00
+            };
+
+            const productoSelect = document.getElementById('producto');
+            const cantidadInput = document.getElementById('cantidad');
+            const codigoPostalClienteInput = document.getElementById('codigo_postal_cliente');
+            const empresaEnvioSelect = document.getElementById('empresa_envio');
+            const costoEnvioOutput = document.getElementById('costo_envio');
+
+            const productoSeleccionado = productoSelect.value;
+            const cantidad = parseFloat(cantidadInput.value);
+            const codigoPostalCliente = codigoPostalClienteInput.value;
+            const empresaEnvio = empresaEnvioSelect.value;
+
+            // Simulación de cálculo de costo de envío
+            const costoEnvioBase = 5.00; // Costo base de envío
+            const costoPorLibra = 1.00; // Costo adicional por libra
+
+            const costoTotalProducto = precios[productoSeleccionado] * cantidad;
+            const costoTotalEnvio = costoEnvioBase + (costoPorLibra * cantidad);
+
+            // Opciones de envío y tiempos de entrega
+            const tiemposEntrega = {
+                usps: "3 a 5 días",
+                ups: "2 a 4 días",
+                fedex: "1 a 3 días"
+            };
+
+            const tiempoEntrega = tiemposEntrega[empresaEnvio];
+
+            // Mostrar el resultado del cálculo de envío
+            costoEnvioOutput.innerHTML = `
+                <p>Producto seleccionado: ${productoSelect.options[productoSelect.selectedIndex].text}</p>
+                <p>Precio por libra: ${precios[productoSeleccionado].toFixed(2)} USD</p>
+                <p>Cantidad: ${cantidad} libras</p>
+                <p>Código Postal del Cliente: ${codigoPostalCliente}</p>
+                <p>Compañía de Envío: ${empresaEnvioSelect.options[empresaEnvioSelect.selectedIndex].text}</p>
+                <p>Tiempo estimado de entrega: ${tiempoEntrega}</p>
+                <p><strong>Costo total del producto: ${costoTotalProducto.toFixed(2)} USD</strong></p>
+                <p><strong>Costo total de envío: ${costoTotalEnvio.toFixed(2)} USD</strong></p>
+                <p><strong>Costo total: ${(costoTotalProducto + costoTotalEnvio).toFixed(2)} USD</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>
